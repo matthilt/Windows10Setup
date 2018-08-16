@@ -25,7 +25,7 @@ $KeyCUAdvanced = "$KeyCUExplorer\Advanced"
 Set-ItemProperty -Path $KeyCUAdvanced -Name AutoCheckSelect -Value 0 # Disable check boxes
 Set-ItemProperty -Path $KeyCUAdvanced -Name HideFileExt 0 # Show File Extensions
 Set-ItemProperty -Path $KeyCUAdvanced -Name LaunchTo -Type DWord -Value 1 # Change Explorer home screen back to "This PC"
-Set-ItemProperty -Path $KeyCUAdvanced -Name MMTaskbarMode -Value 2 # Show taskbar buttons on all taskbars
+Set-ItemProperty -Path $KeyCUAdvanced -Name MMTaskbarMode -Value 0 # Show taskbar buttons on all taskbars
 Set-ItemProperty -Path $KeyCUAdvanced -Name NavPaneExpandToCurrentFolder -Value 1 # Expand This PC to open folder in Nav Pane
 Set-ItemProperty -Path $KeyCUAdvanced -Name NavPaneShowAllFolders -Value 1 # Show all folders in Nav Pane in Explorer
 Set-ItemProperty -Path $KeyCUAdvanced -Name ShowTaskViewButton -Value 0 # Hide task view button on taskbar
