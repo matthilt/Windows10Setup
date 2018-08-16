@@ -1,6 +1,6 @@
 <#
     Script name: 	Remove-Windows10DefaultApps.ps1
-	Version:     	0.1
+	Version:     	1803.1.0
 	Purpose:		Remove unwanted default apps from a Windows 10 1803 Enterprise install
     Author:      	Matt Hilton
     Contact:     	matthilt@gmail.com
@@ -35,7 +35,7 @@ $apps = @(
 	"Microsoft.Windows.Photos"
 	"Microsoft.WindowsAlarms"
 	#"Microsoft.WindowsCalculator"
-	"Microsoft.WindowsCamera"
+	#"Microsoft.WindowsCamera"
 	"microsoft.windowscommunicationsapps"
 	"Microsoft.WindowsFeedbackHub"
 	"Microsoft.WindowsMaps"
