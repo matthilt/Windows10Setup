@@ -37,9 +37,9 @@ Set-ItemProperty -Path "$KeyCUAdvanced\People" -Name PeopleBand -Type DWord -Val
 Set-ItemProperty -Path "$KeyCUCurrentVersion\GameDVR" -Name AppCaptureEnabled -Type DWord -Value 0 # Disable Xbox Gamebar
 Set-ItemProperty -Path "HKCU:\System\GameConfigStore" -Name GameDVR_Enabled -Type DWord -Value 0 # Disable Xbox Gamebar
 
-$KeySearch = "$KeyCUCurrentVersion\Search"
-Set-ItemProperty -Path $KeySearch -Name "BingSearchEnabled" -Value 0 # Disable Bing Search
-Set-ItemProperty -Path $KeySearch -Name SearchboxTaskbarMode -Type DWord -Value 0 # TaskBar Hide Cortana Search
+$KeyCUSearch = "$KeyCUCurrentVersion\Search"
+Set-ItemProperty -Path $KeyCUSearch -Name "BingSearchEnabled" -Value 0 # Disable Bing Search
+Set-ItemProperty -Path $KeyCUSearch -Name SearchboxTaskbarMode -Type DWord -Value 0 # TaskBar Hide Cortana Search
 
 $KeyLMWiFi = "HKLM:\Software\Microsoft\PolicyManager\default\WiFi\"
 $KeyLMAllowWiFiHotSpotReporting = "$KeyLMWiFi\AllowWiFiHotSpotReporting"
@@ -79,5 +79,7 @@ New-ItemProperty -Path "$KeyCRShell\print\command" -Name "(Default)" -Value '%Sy
 New-ItemProperty -Path "$KeyCRShell\print\DropTarget" -Name "Clsid" -Value "{60fd46de-f830-4894-a628-6fa81bc0190d}" -PropertyType string -Force | Out-Null
 
 Remove-PSDrive -Name HKCR
+
+Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer" -Name "SmartScreenEnabled" -Type String -Value "Off" #Disables Smart screen filter
 
 Stop-Process -Name explorer
